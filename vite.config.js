@@ -4,7 +4,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0',
+    host: true,
+    allowedHosts: ['myterraceapp.com', 'www.myterraceapp.com'],
     port: 5173,
     proxy: {
       '/api': {
